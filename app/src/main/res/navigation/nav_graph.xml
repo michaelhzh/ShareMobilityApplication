@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.myapplication.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/starting_point">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_RiderFirst"
+            app:destination="@id/riderFirst" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.myapplication.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/driver_first">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_driverSecond"
+            app:destination="@id/driverSecond" />
+    </fragment>
+    <fragment
+        android:id="@+id/riderFirst"
+        android:name="com.example.myapplication.RiderFirst"
+        android:label="RiderFirst" >
+        <action
+            android:id="@+id/action_RiderFirst_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_riderFirst_to_riderSecond"
+            app:destination="@id/riderSecond" />
+    </fragment>
+    <fragment
+        android:id="@+id/riderSecond"
+        android:name="com.example.myapplication.RiderSecond"
+        android:label="RiderSecond" >
+        <action
+            android:id="@+id/action_riderSecond_to_riderFirst"
+            app:destination="@id/riderFirst" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverSecond"
+        android:name="com.example.myapplication.DriverSecond"
+        android:label="DriverSecond" >
+        <action
+            android:id="@+id/action_driverSecond_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+</navigation>
