@@ -39,8 +39,8 @@
             android:id="@+id/action_RiderFirst_to_FirstFragment"
             app:destination="@id/FirstFragment" />
         <action
-            android:id="@+id/action_riderFirst_to_riderSecond"
-            app:destination="@id/riderSecond" />
+            android:id="@+id/action_riderFirst_to_osmMapActivity"
+            app:destination="@id/osmMapActivity" />
     </fragment>
     <fragment
         android:id="@+id/riderSecond"
@@ -57,5 +57,10 @@
         <action
             android:id="@+id/action_driverSecond_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/osmMapActivity"
+        android:name="com.example.myapplication.OsmMapActivity"
+        android:label="OsmMapActivity" >
     </fragment>
 </navigation>

@@ -37,7 +37,7 @@ class RiderFirst : Fragment() {
                 putString("rider_from", rider_from.text.toString())
                 putString("rider_dest", rider_destination.text.toString())
             }?.apply()
-            findNavController().navigate(R.id.action_riderFirst_to_riderSecond)
+            findNavController().navigate(R.id.action_riderFirst_to_osmMapActivity)
         }
 
     }
